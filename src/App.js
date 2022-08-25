@@ -15,6 +15,7 @@ import Componentwillunmount from './Componentwillunmout';
 import Luseeffect from './Luseeffect';
 import Style from './Style';
 import { Button } from 'react-bootstrap'
+import Larray from './Larray';
 
 function App() {
 
@@ -126,7 +127,7 @@ function App() {
       {/* Styles in React Js */}
 
       {/*Handle array in React */}
-
+        <Larray />
       {/*Handle array in React */}
 
 
