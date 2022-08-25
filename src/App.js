@@ -16,6 +16,7 @@ import Luseeffect from './Luseeffect';
 import Style from './Style';
 import { Button } from 'react-bootstrap'
 import Larray from './Larray';
+import Lnestedlist from './Lnestedlist';
 
 function App() {
 
@@ -127,8 +128,13 @@ function App() {
       {/* Styles in React Js */}
 
       {/*Handle array in React */}
-        <Larray />
+      {/* <h1>Bootstrap table with list in react</h1>
+      <Larray /> */}
       {/*Handle array in React */}
+
+      {/*Nested array with nested list */}
+      <Lnestedlist />
+      {/*Nested array with nested list */}
 
 
     </div>
