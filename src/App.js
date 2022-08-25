@@ -17,6 +17,8 @@ import Style from './Style';
 import { Button } from 'react-bootstrap'
 import Larray from './Larray';
 import Lnestedlist from './Lnestedlist';
+import Reusecomponents from './Reusecomponents'; 
+import Reactfragment from './Reactfragment';
 
 function App() {
 
@@ -133,8 +135,16 @@ function App() {
       {/*Handle array in React */}
 
       {/*Nested array with nested list */}
-      <Lnestedlist />
+      {/* <Lnestedlist /> */}
       {/*Nested array with nested list */}
+
+      {/* Reuse components */}
+      <Reusecomponents />
+      {/* Reuse components */}
+
+      {/* React Fragment */}
+      {/* <Reactfragment /> */}
+      {/* React Fragment */}
 
 
     </div>

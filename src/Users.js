@@ -1,19 +1,24 @@
-function Users() {
-    return (
-      <div className="Users">
-       <h1>This is user main component</h1>
-       <CalculateRisk />
-      </div>
-    );
-  }
+import { Button } from 'react-bootstrap';
+import React from 'react';
 
-  function CalculateRisk() {
-    return (
-      <div className="cal">
-       <h2>This is second componenet in the same file</h2>
-      </div>
-    );
-  }
-  
-  export default Users;
-  
+function Users(props) {
+  return (
+      <>
+          <tr>
+            <td>{props.data.name}</td>
+            <td>{props.data.email}</td>
+          </tr>
+          <Button onClick={props.fnc}> Hello</Button>
+      </>
+  );
+}
+
+function CalculateRisk() {
+  return (
+    <div className="cal">
+      <h2>This is second componenet in the same file</h2>
+    </div>
+  );
+}
+
+export default Users;
