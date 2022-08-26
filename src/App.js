@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Users from './Users';
@@ -23,6 +23,11 @@ import Statelifting from './Statelifting';
 import Purecomponents from './Purecomponent';
 import Lusememo from './Lusememo';
 import LRef from './LRef';
+import Luseref from './Luseref';
+import Lcontrolled from './Lcontrolled';
+import Luncontrolled from './Luncontrolled';
+import Hoc from './Hoc';
+import Lroute from './Lroute';
 
 function App() {
 
@@ -32,7 +37,7 @@ function App() {
   const [print, setPrint] = useState(false)
   const [status, setStatus] = useState(true)
   const [show, setShow] = useState(true)
-
+  const inputFref=useRef(null)
 
   function updateData() {
     setData(data + 1)
@@ -51,6 +56,11 @@ function App() {
   {
     alert('Name is :' + a.name + ' , Email is :' + a.email);
   }
+
+    function forwardred()
+    {
+        inputFref.current.value = '5000'
+    }
 
   return (
     <div className="App">
@@ -169,9 +179,29 @@ function App() {
       {/* useMemo Hooks */}
 
       {/* Ref in React Js */}
-      <LRef />
+      {/* <LRef /> */}
       {/* Ref in React Js */}
 
+      {/*Use Ref in Functional component */}
+      {/* <Luseref ref={inputFref} /><br ></br><br></br>
+      <button onClick={forwardred}>Update DOM using Forward Ref</button> */}
+      {/*Use Ref in Functional component */}
+
+      {/* Controlled Component */}
+      {/* <Lcontrolled></Lcontrolled> */}
+      {/* Controlled Componenet */}
+
+      {/* Uncontrolled Componenet */}
+      {/* <Luncontrolled></Luncontrolled> */}
+      {/* Uncontrolled Componenet */}
+
+      {/* HOC Component */}
+      {/* <Hoc></Hoc> */}
+      {/* HOC Component */}
+
+      {/* Routing in React */}
+      <Lroute />
+      {/* Routing in React */}
 
     </div>
   );
