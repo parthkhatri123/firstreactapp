@@ -19,6 +19,10 @@ import Larray from './Larray';
 import Lnestedlist from './Lnestedlist';
 import Reusecomponents from './Reusecomponents'; 
 import Reactfragment from './Reactfragment';
+import Statelifting from './Statelifting';
+import Purecomponents from './Purecomponent';
+import Lusememo from './Lusememo';
+import LRef from './LRef';
 
 function App() {
 
@@ -41,6 +45,11 @@ function App() {
 
   function passData() {
     alert('Hello from app');
+  }
+
+  function parentCall(a)
+  {
+    alert('Name is :' + a.name + ' , Email is :' + a.email);
   }
 
   return (
@@ -139,12 +148,29 @@ function App() {
       {/*Nested array with nested list */}
 
       {/* Reuse components */}
-      <Reusecomponents />
+      {/* <Reusecomponents /> */}
       {/* Reuse components */}
 
       {/* React Fragment */}
       {/* <Reactfragment /> */}
       {/* React Fragment */}
+
+      {/* State LIfting Up */}
+      {/* <Statelifting data={parentCall} /> */}
+      {/* State LIfting Up */}
+
+      {/* Pure Component */}
+      {/* <Purecomponents count={data} />
+      <button onClick={()=>setData(data+1)}>Update Count</button> */}
+      {/* Pure Component */}
+
+      {/* useMemo Hooks */}
+      {/* <Lusememo /> */}
+      {/* useMemo Hooks */}
+
+      {/* Ref in React Js */}
+      <LRef />
+      {/* Ref in React Js */}
 
 
     </div>
