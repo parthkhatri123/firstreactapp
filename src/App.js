@@ -28,6 +28,7 @@ import Lcontrolled from './Lcontrolled';
 import Luncontrolled from './Luncontrolled';
 import Hoc from './Hoc';
 import Lroute from './Lroute';
+import Dynamicroute from './Dynamicroute';
 
 function App() {
 
@@ -200,8 +201,14 @@ function App() {
       {/* HOC Component */}
 
       {/* Routing in React */}
-      <Lroute />
+      {/* <Lroute /> */}
       {/* Routing in React */}
+
+      {/* Dynamic Routing in React */}
+      <Dynamicroute />
+      {/* Dynamic Routing in React */}
+
+
 
     </div>
   );
