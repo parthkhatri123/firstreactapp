@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link } from 'react-router-dom';
+import { Route, Link , Routes } from 'react-router-dom';
 import Dynamicpages from "./Dynamicpage";
 
 function Dynamicroute()
@@ -19,10 +19,13 @@ function Dynamicroute()
             {
                 users.map((item,i) =>
                     <div key={i}>
-                        <Link to={'/dynamic/' + item.id}>{item.name}</Link>
+                        <Link to={'/dynamicpage/' + item.id}>{item.name}</Link>
                     </div>
                 )
             }
+            <Routes>
+            <Route path="/dynamicpage/:id" ></Route>
+            </Routes>
         </div>
     )
 }

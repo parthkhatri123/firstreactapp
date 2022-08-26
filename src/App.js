@@ -29,6 +29,7 @@ import Luncontrolled from './Luncontrolled';
 import Hoc from './Hoc';
 import Lroute from './Lroute';
 import Dynamicroute from './Dynamicroute';
+import Apifetch from './Apifetch';
 
 function App() {
 
@@ -205,9 +206,12 @@ function App() {
       {/* Routing in React */}
 
       {/* Dynamic Routing in React */}
-      <Dynamicroute />
+      {/* <Dynamicroute /> */}
       {/* Dynamic Routing in React */}
 
+      {/* API Call */}
+      <Apifetch />
+      {/* API Call */}
 
 
     </div>
