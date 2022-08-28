@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect,useRef , createContext } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Users from './Users';
@@ -30,6 +30,13 @@ import Hoc from './Hoc';
 import Lroute from './Lroute';
 import Dynamicroute from './Dynamicroute';
 import Apifetch from './Apifetch';
+import Previousstate from './Previousstate';
+import { Commoncontext } from './components/Commoncontext';
+import Practice from './Practice';
+import Lcontext from './Lcontext';
+import Lcontext3 from './Lcontext3';
+
+export const GlobalInfo = createContext();
 
 function App() {
 
@@ -39,8 +46,10 @@ function App() {
   const [print, setPrint] = useState(false)
   const [status, setStatus] = useState(true)
   const [show, setShow] = useState(true)
+  const [color,setColoe] = useState('green')
+  const [day,setDay] = useState('Monday')
   const inputFref=useRef(null)
-
+  
   function updateData() {
     setData(data + 1)
   }
@@ -64,7 +73,15 @@ function App() {
         inputFref.current.value = '5000'
     }
 
+
+    function getDay(item)
+    {
+      console.log( item)
+      setDay(item)
+    }
+
   return (
+    <GlobalInfo.Provider value={{'Color' : color,getDay:getDay}}>
     <div className="App">
 
       {/* State In React Functional component */}
@@ -210,11 +227,26 @@ function App() {
       {/* Dynamic Routing in React */}
 
       {/* API Call */}
-      <Apifetch />
+      {/* <Apifetch /> */}
       {/* API Call */}
 
+      {/* Previous State */}
+      {/* <Previousstate /> */}
+      {/* Previous State */}
 
+      {/* Context API */}
+      {/* <Commoncontext.Provider>
+        <h1>Context API</h1>
+      </Commoncontext.Provider> */}
+      {/* Context API */}
+
+      {/* <Practice /> */}
+
+      <h1>App Component Context API {day}</h1>
+      <Lcontext/>
+      <Lcontext3 />
     </div>
+    </GlobalInfo.Provider>
   );
 }
 

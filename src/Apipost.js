@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {Table} from 'react-bootstrap';
 
-function Apipost()
+function Apipost(props)
 {
     const [title,setTitle]=useState('')
     const [author,setAuthor]=useState('') 
@@ -20,7 +20,10 @@ function Apipost()
         body:JSON.stringify(formData)
        }).then((r)=>
        {
-            console.log(r)
+            r.json().then((rrr)=>
+            {
+            //    {props.list}
+            })
        })
       
     }
