@@ -123,7 +123,7 @@ function App() {
       {/* Hide / Show element and Toggle Element */}
 
       {/* Rendering Form */}
-      {/* <Form /> */}
+      <Form />
       {/* Rendering Form */}
 
       {/* Conditional Rendering and Login Logout */}
@@ -242,9 +242,9 @@ function App() {
 
       {/* <Practice /> */}
 
-      <h1>App Component Context API {day}</h1>
-      <Lcontext/>
-      <Lcontext3 />
+      {/* <h1>App Component Context API {day}</h1> */}
+      {/* <Lcontext/>
+      <Lcontext3 /> */}
     </div>
     </GlobalInfo.Provider>
   );

@@ -16,7 +16,8 @@ function Apifetch()
 
     function getList()
     {
-        fetch("http://localhost:3004/posts").then((result)=>{
+        fetch("http://localhost:3004/posts").then((result)=>
+        {
             result.json().then((resp)=>
             {
                 console.log(resp[0])
